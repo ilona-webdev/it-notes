@@ -57,6 +57,8 @@ function findNemo(array) {
 findNemo(large);
 ```
 
+### O(n)
+
 This is an example of Big O notatin O(n) --> Linear Time.
 It takes linear time to find the Nemo. Proportionally
 Big O depends on inputs (n) number of fish.
@@ -92,3 +94,34 @@ boxCompressing(everyone);
 ```
 
 ---
+
+### O(n)
+
+O(1) - constant amount of time.
+It's in green area like O(n), it's really scalable.
+
+-  Linear time
+-  Constant time
+
+#### Exercise
+
+**What is the Big O of the below function? (Hint, you may want to go line by line)**
+
+```javascript
+const myInput = [10, 20, 30, 40];
+
+function funChallenge(input) {
+   let a = 10; // О(1)
+   a = 50 + 3; // О(1)
+
+   for (let i = 0; i < input.length; i++) {
+      // О(n)
+      anotherFunction(); // О(n)
+      let stranger = true; //O(n)
+      a++; //O(n)
+   }
+   return a; //О(1)
+}
+
+//BIG O(3 + 4n)
+```
