@@ -125,3 +125,91 @@ function funChallenge(input) {
 
 //BIG O(3 + 4n)
 ```
+
+#### Exercise
+
+```javascript
+// What is the Big O of the below function? (Hint, you may want to go line by line)
+function anotherFunChallenge(input) {
+   let a = 5; // O(1)
+   let b = 10; // O(1)
+   let c = 50; // O(1)
+   for (let i = 0; i < input; i++) {
+      // O(n)
+      let x = i + 1; // O(n)
+      let y = i + 2; // O(n)
+      let z = i + 3; // O(n)
+   }
+   for (let j = 0; j < input; j++) {
+      // O(n)
+      let p = j * 2; // O(n)
+      let q = j * 2; // O(n)
+   }
+   let whoAmI = "I don't know"; // O(1)
+}
+// Big O = 4 + 7n = O(n)
+```
+
+### Rule Book
+
+-  Rule 1: Worst Case
+   When we calculate Big O we always calculate worst Case
+   Best case when our 'Nemo' will be in the start of array, the worst case: when 'Nemo' will be in the end of array
+-  Rule 2: Remove constants
+-  Rule 3: Different terms for inputs
+-  Rule 4: Drop non dominants
+
+To rule 3
+
+```javascript
+function compressBoxesTwice(boxes, boxes 2) {
+   boxes.forEach(function(box){
+      console.log(box);
+   })
+
+   boxes2.forEach(function(box) {
+      console.log(box);
+   })
+}
+```
+
+Here **up** we have 2 different arrays, and **down** we have two loops under one array
+
+O(a + b) // when arrays follow one after another we must + (up)
+
+O(a _ b) // when arrays nested one in another we use _ (down)
+
+#### Exercise
+
+```javascript
+// Log all pairs of array
+const nums = [1, 2, 3, 4, 5];
+
+function logPairs(array) {
+   for (let i = 0; i < array.length; i++) {
+      for (let k = 0; k < array.length; k++) {
+         console.log(array[i], array[k]);
+      }
+   }
+}
+
+logPairs(nums);
+```
+
+Example of O(n ^ 2);
+
+The same decision in ES5
+
+```javascript
+function logPairs(array) {
+   array.forEach(function (firstBox) {
+      array.forEach(function (secondBox) {
+         console.log(firstBox, secondBox);
+      });
+   });
+}
+
+logPairs(nums);
+```
+
+O(n2) - quadratic time (2 is under n)
