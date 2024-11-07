@@ -213,3 +213,7 @@ logPairs(nums);
 ```
 
 O(n2) - quadratic time (2 is under n)
+
+### O(n!)
+
+Factorial - you are adding a loop for every element
